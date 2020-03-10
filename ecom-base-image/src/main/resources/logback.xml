@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+	<statusListener	class="ch.qos.logback.core.status.NopStatusListener" />
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</Pattern>
+		</layout>
+	</appender>
+
+	<logger name="com.juancpaz.ecom" level="INFO" />
+	<logger name="org.springframework" level="OFF" />
+	<logger name="ch.qos.logback" level="OFF" />
+	<logger name="org.eclipse.jdt" level="OFF" />
+
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

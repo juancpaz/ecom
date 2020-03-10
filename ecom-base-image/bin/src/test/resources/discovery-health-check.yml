@@ -1,0 +1,16 @@
+name: "discovery-healthchecks-1"
+description: "HealthChecks 1"
+healthChecks:
+- type: "REST"
+  name: "discovery-healthcheck-1"
+  description: "Rest HealthCheck 1"
+  delay: 5
+  timeout: 30
+  url: "http://localhost:8761/actuator/health"
+  expected: 
+    fields:
+    - name: "status"
+      value: "UP"
+
+        
+  

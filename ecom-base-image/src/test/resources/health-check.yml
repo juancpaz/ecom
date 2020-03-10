@@ -1,0 +1,17 @@
+name: "healthchecks-1"
+description: "HealthChecks 1"
+healthChecks:
+- type: "PING"
+  name: "ping-healthcheck-1"
+  description: "Ping HealthCheck 1"
+  delay: 5
+  timeout: 30
+  hostname: "www.google.com"
+  port: 80
+- type: "REST"
+  name: "rest-healthcheck-1"
+  description: "Rest HealthCheck 1"
+  delay: 5
+  timeout: 30
+  url: "https://postman-echo.com/status/200"
+  expected: "{\"status\": 200}"

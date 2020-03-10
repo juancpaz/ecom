@@ -1,0 +1,62 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.juancpaz.ecom</groupId>
+	<artifactId>ecom</artifactId>
+	<version>${revision}</version>
+
+	<name>ecom</name>
+
+	<packaging>pom</packaging>
+
+	<properties>
+		<revision>0.0.1-SNAPSHOT</revision>
+		<java.version>1.8</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<resource.delimiter>@</resource.delimiter>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<spring-boot.version>2.0.9.RELEASE</spring-boot.version>
+		<spring-cloud.version>Finchley.SR4</spring-cloud.version>
+		<spring-boot-admin.version>2.0.6</spring-boot-admin.version>
+		<axon.version>3.3.3</axon.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring-boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>${spring-boot.version}</version>
+				</plugin>
+			</plugins>
+
+		</pluginManagement>
+	</build>
+
+
+	<modules>
+		<module>ecom-base-image</module>
+		<module>ecom-infra</module>
+		<module>ecom-services</module>
+		<module>ecom-app</module>
+	</modules>
+
+</project>

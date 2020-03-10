@@ -1,0 +1,14 @@
+name: "healthchecks-1"
+description: "Product Service Healthchecks"
+healthChecks:
+- type: "REST"
+  name: "check-gateway-server-9000"
+  description: "Check Configuration Server"
+  delay: 5
+  timeout: 60
+  url: "http://ecom-gateway-server:9000/actuator/health"
+  expected: 
+    fields:
+    - name: "status"
+      value: "UP"
+ 

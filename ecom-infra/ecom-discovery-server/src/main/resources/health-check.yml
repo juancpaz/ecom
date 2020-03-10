@@ -1,0 +1,33 @@
+name: "healthchecks-1"
+description: "Configuration Server Healthchecks"
+healthChecks:
+- type: "PING"
+  name: "rabbit-healthcheck-15672"
+  description: "RabbitDBHealthCheck 1"
+  delay: 5
+  timeout: 30
+  hostname: "ecom-rabbit1"
+  port: 15672
+- type: "PING"
+  name: "rabbit-healthcheck-5672"
+  description: "RabbitDBHealthCheck 1"
+  delay: 5
+  timeout: 30
+  hostname: "ecom-rabbit1"
+  port: 5672  
+- type: "PING"
+  name: "mongodb-healthcheck-27017"
+  description: "MongoDBHealthCheck 1"
+  delay: 5
+  timeout: 30
+  hostname: "ecom-mongodb"
+  port: 27017
+- type: "REST"
+  name: "check-configuration-server-8888"
+  description: "Check Configuration Server"
+  delay: 5
+  timeout: 30
+  url: "http://ecom-configuration-server:8888/actuator/health"
+  expected:
+    response: "{\"status\":\"UP\"}"
+ 

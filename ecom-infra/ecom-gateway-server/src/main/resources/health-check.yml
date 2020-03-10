@@ -1,0 +1,14 @@
+name: "healthchecks-1"
+description: "Gateway Server Healthchecks"
+healthChecks:
+- type: "REST"
+  name: "check-discovery-server-8761"
+  description: "Check Configuration Server"
+  delay: 5
+  timeout: 30
+  url: "http://ecom-discovery-server:8761/actuator/health"
+  expected: 
+    fields:
+    - name: "status"
+      value: "UP"
+ 

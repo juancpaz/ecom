@@ -1,0 +1,13 @@
+name: "configuration-healthchecks-1"
+description: "HealthChecks 1"
+healthChecks:
+- type: "REST"
+  name: "configuration-healthcheck-1"
+  description: "Rest HealthCheck 1"
+  delay: 5
+  timeout: 30
+  url: "http://localhost:8888/actuator/health"
+  expected: 
+    response: "{\"status\":\"UP\"}"
+  
+  

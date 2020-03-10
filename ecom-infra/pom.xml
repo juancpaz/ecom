@@ -1,0 +1,23 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.juancpaz.ecom</groupId>
+        <artifactId>ecom</artifactId>
+        <version>${revision}</version>
+        <relativePath>..</relativePath>
+    </parent>	
+
+	<artifactId>ecom-infra</artifactId>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>ecom-configuration-server</module>
+		<module>ecom-discovery-server</module>
+		<module>ecom-gateway-server</module>
+		<module>ecom-admin-server</module>
+	</modules>
+
+</project>
